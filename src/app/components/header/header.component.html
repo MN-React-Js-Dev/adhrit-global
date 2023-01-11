@@ -5,14 +5,14 @@
         <nav class="main-nav">
           <a href="index.html" class="logo">
             <span>
-              <a routerLink="/" (click)="forceNavigate('home')" class="active">
+              <a routerLink="/" (click)="forceNavigate('home')">
                 <img class="logoSet testonlu" src="assets/images/logo-01.png" />
               </a>
             </span>
           </a>
           <ul class="nav" [ngClass]="status ? 'InActive' : 'cstm-Active'">
             <li class="scroll-to-section">
-              <a routerLink="/" (click)="forceNavigate('home')">Home</a>
+              <a routerLink="/" (click)="forceNavigate('home')" class="active">Home</a>
             </li>
             <!-- class="active" -->
             <li class="scroll-to-section">
@@ -22,7 +22,6 @@
               <a routerLink="/services" (click)="forceNavigate('services')">Services</a>
             </li>
             <li class="scroll-to-section">
-              <!-- <a routerLink="/home">Home</a> -->
               <a routerLink="/our-process" (click)="forceNavigate('our_process')">Our Process</a>
             </li>
             <li class="scroll-to-section">

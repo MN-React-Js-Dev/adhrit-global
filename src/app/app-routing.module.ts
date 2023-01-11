@@ -10,7 +10,8 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, {
     // useHash: false,
     anchorScrolling: 'enabled'
-  })],
+  }),],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

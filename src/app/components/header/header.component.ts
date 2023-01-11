@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   status: boolean = false;
   isDisable: boolean = false;
- 
+  ActiveStatus: boolean = false;
+
   toggleHeader(): void {
     this.status = !this.status;
   }
@@ -20,10 +21,14 @@ export class HeaderComponent {
   ) { }
 
   forceNavigate(name: string) {
+    // this.ActiveStatus = !this.ActiveStatus;
     this.router.navigate(['/'], { fragment: name });
   }
-  clickme(){
+  clickme() {
     this.router.navigateByUrl('/our-process');
-    
+
   }
+  
+   
+
 }

@@ -13,6 +13,9 @@ import { OurPortfolioComponent } from './components/our-portfolio/our-portfolio.
 import { OurBlogComponent } from './components/our-blog/our-blog.component';
 import { ThemeComponent } from './components/theme/theme.component';
 import { OurProcessComponent } from './components/our-process/our-process.component';
+import { FormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,10 +29,14 @@ import { OurProcessComponent } from './components/our-process/our-process.compon
     OurPortfolioComponent,
     OurBlogComponent,
     ThemeComponent,
-    OurProcessComponent
+    OurProcessComponent,
+     
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
