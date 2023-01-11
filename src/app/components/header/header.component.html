@@ -1,0 +1,47 @@
+<header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="main-nav">
+          <a href="index.html" class="logo">
+            <span>
+              <a routerLink="/" (click)="forceNavigate('home')" class="active">
+                <img class="logoSet testonlu" src="assets/images/logo-01.png" />
+              </a>
+            </span>
+          </a>
+          <ul class="nav" [ngClass]="status ? 'InActive' : 'cstm-Active'">
+            <li class="scroll-to-section">
+              <a routerLink="/" (click)="forceNavigate('home')">Home</a>
+            </li>
+            <!-- class="active" -->
+            <li class="scroll-to-section">
+              <a routerLink="/about" (click)="forceNavigate('about')">About Us</a>
+            </li>
+            <li class="scroll-to-section">
+              <a routerLink="/services" (click)="forceNavigate('services')">Services</a>
+            </li>
+            <li class="scroll-to-section">
+              <!-- <a routerLink="/home">Home</a> -->
+              <a routerLink="/our-process" (click)="forceNavigate('our_process')">Our Process</a>
+            </li>
+            <li class="scroll-to-section">
+              <a routerLink="/blog" (click)="forceNavigate('blog')">Blog</a>
+            </li>
+            <!-- <li class="scroll-to-section"><a routerLink="/#contact" (click)="forceNavigate('contact')">Message Us</a> </li> -->
+            <!-- <a   routerLink="/#about" (click)="forceNavigate('about')">about 3</a> -->
+            <li class="scroll-to-section">
+              <div class="main-red-button">
+                <a routerLink="/contact" (click)="forceNavigate('contact')">Contact Now</a>
+              </div>
+            </li>
+            <app-theme></app-theme>
+          </ul>
+          <a class='menu-trigger' (click)="toggleHeader()">
+            <span>Menu</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
