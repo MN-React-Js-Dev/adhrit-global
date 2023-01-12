@@ -1251,7 +1251,7 @@ Portfolio
   color: #fff;
 }
 
-.our-portfolio .showed-content {
+/* .our-portfolio .showed-content {
   top: 0px;
   position: relative;
   z-index: 3;
@@ -1261,8 +1261,20 @@ Portfolio
   border-radius: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.5s;
-}
+} */
 
+
+.our-portfolio .showed-content {
+  top: 0px;
+  position: relative;
+  /* z-index: 3; */
+  background-color: #fff;
+  /* text-align: center; */
+  padding: 28px 54px 28px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+  transition: all 0.5s;
+}
 .our-portfolio .showed-content img {
   max-width: 100px;
 }
