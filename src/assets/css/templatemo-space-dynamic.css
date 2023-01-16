@@ -1744,3 +1744,7 @@ h5.main-heading {
 .apply_white{
   color: white !important;
 }
+
+body{
+  overflow-x:hidden;
+}

@@ -16,6 +16,8 @@ import { OurProcessComponent } from './components/our-process/our-process.compon
 import { FormsModule } from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+// import { API_KEY, GoogleSheetsDbService } from 'ng-google-sheets-db';
+import { ContactService } from './contact.service';
 
 @NgModule({
   declarations: [
@@ -38,8 +40,9 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule,
     AppRoutingModule
+    
   ],
-  providers: [],
+  providers: [ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
