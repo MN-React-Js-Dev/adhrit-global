@@ -10,14 +10,23 @@ import { ContactService } from 'src/app/contact.service';
   styleUrls: ['./contact-us.component.css']
 })
 export class ContactUsComponent implements OnInit {
+
   customerform = new FormGroup({
     name: new FormControl(''),
     surname: new FormControl(''),
-    email: new FormControl(''),
     message: new FormControl(''),
+    email: new FormControl('', [
+      Validators.required,
+      Validators.email]),
   })
 
+
+  get email() {
+    return this.customerform.get('email')
+  }
   constructor(private builder: FormBuilder, private contact: ContactService, private http: HttpClient) { }
+
+
 
   ngOnInit(): void { }
   onSubmit() {
@@ -27,8 +36,10 @@ export class ContactUsComponent implements OnInit {
       Swal.fire({
         title: "Sucess", text: "Thank you for Contacting us, We will surely Reach you ASAP",
         icon: 'success',
-        confirmButtonText: 'OK',
-        confirmButtonColor: 'rgb(153 28 62)',
+        showCancelButton: false,
+        showConfirmButton: false
+        // confirmButtonText: 'OK',
+        // confirmButtonColor: 'rgb(153 28 62)',
       })
 
       let header = new HttpHeaders({ 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
