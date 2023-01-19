@@ -86,11 +86,11 @@
 
  } */
 
- @media (max-width: 414px) {
+ @media (max-width: 425px) {
      .cstm-theme-div {
-         float: right;
-         margin-top: -370px;
-         margin-right: 88px;
+         position: fixed;
+         top: 33px;
+         left: 269px;
      }
 
  }
@@ -116,6 +116,3 @@
  .nan_apply_css {
      color: black !important;
  }
-
-
- 
